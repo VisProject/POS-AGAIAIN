@@ -1,0 +1,312 @@
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fafafa;
+    overflow: hidden;
+}
+
+/* Left Hero Section */
+.heroSection {
+    flex: 1.2;
+    position: relative;
+    background-color: #1a4f36;
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+    color: white;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.heroLogoText {
+    font-size: 8rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin: 0;
+}
+
+.heroSubText {
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Brush Script MT', cursive;
+    /* A script font proxy for the neon sign */
+    margin-top: -1rem;
+}
+
+/* Right Login Section */
+.loginSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdfdfd;
+}
+
+.loginContent {
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.headerTitles {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.welcomeText {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.roleSelector {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.roleLabel {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    padding-left: 0.25rem;
+}
+
+.dropdownTrigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: white;
+    cursor: pointer;
+    transition: border-color var(--transition-fast);
+}
+
+.dropdownTrigger:hover {
+    border-color: #1a4f36;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--tag-bg);
+    border-radius: var(--radius-sm);
+    font-size: 1.25rem;
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.userName {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.userShift {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.dropdownIcon {
+    color: var(--text-muted);
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 0.25rem;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    z-index: 10;
+    overflow: hidden;
+}
+
+.dropdownItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.dropdownItem:hover {
+    background-color: var(--tag-bg);
+}
+
+.pinSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.pinInstruction {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.pinDots {
+    display: flex;
+    gap: 1rem;
+}
+
+.pinSlot {
+    width: 56px;
+    height: 64px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--text-main);
+    background-color: white;
+    transition: all var(--transition-fast);
+}
+
+.pinSlotFilled {
+    border-color: #1a4f36;
+}
+
+.pinSlotError {
+    border-color: #eb001b;
+    color: #eb001b;
+}
+
+.errorText {
+    color: #eb001b;
+    font-size: 0.85rem;
+    margin-top: -0.5rem;
+}
+
+.pinErrorAnimation {
+    animation: shake 0.4s ease-in-out;
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 3rem;
+    margin-top: 1rem;
+}
+
+.numBtn {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-main);
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    transition: background-color var(--transition-fast);
+    cursor: pointer;
+}
+
+.numBtn:hover {
+    background-color: var(--tag-bg);
+}
+
+.numEmpty {
+    width: 64px;
+    height: 64px;
+}
+
+.loginBtn {
+    width: 100%;
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+    background-color: #0b341f;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1rem;
+    opacity: 0.5;
+    cursor: not-allowed;
+    transition: all var(--transition-fast);
+}
+
+.loginBtnActive {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.loginBtnActive:hover {
+    background-color: #082616;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+}

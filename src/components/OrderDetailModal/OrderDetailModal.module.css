@@ -1,0 +1,230 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.modal {
+    width: 700px;
+    max-height: 90vh;
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header {
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.closeBtn {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color var(--transition-fast);
+}
+
+.closeBtn:hover {
+    color: var(--primary-red);
+}
+
+.content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.subTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.label {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.valueStack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.customerName {
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.trxId {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.beeperId {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.listHeader {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.itemRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.itemDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.itemName {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.orderNotesLabel {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+.notesList {
+    list-style: none;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    padding-left: 0.25rem;
+}
+
+.itemAmount {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.actionSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.actionLabel {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.actionGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.actionBtn {
+    padding: 1rem;
+    border: 1px solid #1a4f36;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    color: #1a4f36;
+    transition: all var(--transition-fast);
+}
+
+.actionBtn:hover,
+.actionBtn:active {
+    background-color: #1a4f36;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    padding: 1.25rem 2rem;
+    gap: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.backBtn {
+    padding: 1rem 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.saveBtn {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #1a4f36;
+    border-radius: var(--radius-md);
+    color: #1a4f36;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.saveBtn:hover {
+    background-color: #1a4f36;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
